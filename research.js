@@ -1,3 +1,55 @@
+const inputElm = document.getElementById('inputs')
+
+
+const infotextEL = document.getElementById('info-text');
+
+const meaningEl =document.getElementById('meaning-container')
+
+const title1 = document.getElementById("title")
+const title2 = document.getElementById("meaning")
+
+
+
+async function fetchAPI(word){
+    try {
+    infotextEL.style.display = "block";
+    meaningEl.style.display = "none";
+    infotextEL.innerText =`searching for the meaning of the word${word}`
+        const url = `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`
+    const result = await fetch(url).then((res) => res.json())
+    console.log(result);
+    infotextEL.style.display = "none";
+    meaningEl.style.display = "block";
+    } catch (error) {
+        console.log(error)
+        
+    }
+    //console.log(word);
+}
+
+inputElm.addEventListener("keyup", (e)=>{
+    //console.log(e.key)
+    if(e.target.value && e.key === 'Enter'){
+        fetchAPI(e.target.value)
+    }
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*fetch('https://api.dictionaryapi.dev/api/v2/entries/en/dictionary')
     .then(response => {
 
@@ -31,7 +83,7 @@
     catch(error){
         console.log(error);
     }
-   }*/
+   }
   async function fetchdata() {
     try {
         const inputElement = document.getElementById("js-texts");
@@ -53,10 +105,14 @@
         console.log(data);
         //const NEWitem = data.sprites.front_default;
         //const textElement = document.getElementById('js-paragraph');
-         document.getElementById('js-paragraph').innerHTML = data;
+        let definition =data[0].meanings[0].definition[0].definition;
+        //let name =  JSON.parse(JSON.stringify(data));
+         //document.getElementById('js-paragraph').innerHTML = JSON.stringify(data[0].meanings[0].definition);
+         document.getElementById('js-paragraph').innerHTML = definition;
     } catch (error) {
         console.error(error);
+        document.getElementById('js-paragraph').innerHTML = "Error" + error.message;
     }
 }
 
-// Remove the immediate fetchdata(); call if you want it to trigger on user action
+// Remove the immediate fetchdata(); call if you want it to trigger on user action*/

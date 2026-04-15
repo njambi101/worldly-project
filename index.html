@@ -4,17 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>wordly</title>
+    <title>wordly project</title>
     <link rel="stylesheet" href="research.css">
-
 
 </head>
 
-<body>
-    <input type="text" placeholder="Types of houses" id="js-texts">
-    <button id="js-research" onclick="fetchdata()">research</button>
-    <p id="js-paragraph"></p>
+<body>  
+    <div class="container">
+      <h1 class="title">English dictionary</h1>
+      <input type="text" class="input" id="inputs" placeholder="search a word">
+       <p class="info-text" id="info-text"></p>Input a word on the search box and press enter.</p>
+       <div  class="meaning-container" id="meaning-container">
+       <p>Word Title: <span class="text" id="title">___</span></p>
+       <p>meaning: <span class="meaning" id="meaning">______</span></p>
+       <audio src="" controls id="audio"></audio>
+    </div>
 
+    </div>
    <script src="research.js"></script>
 </body>
 
