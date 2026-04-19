@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>07rock paper scissors</title>
+</head>
+<body>
+    <h3>calculator</h3>
+    <p class="js-shipping"></p>
+    <input placeholder="enter first number" class="js-number"
+     type="number" onkeydown="console.log(event.key)
+     displayMessage(event)
+    ">
+     
+    <button class="js-calculate" onclick="calculateShippingCost() " >calculate</button>
+    
+</body>
+<script>
+    function displayMessage(event) {
+       if (event.key === 'Enter') {
+            calculateShippingCost();
+        }
+    }
+        
+ function calculateShippingCost() {
+    const input = document.querySelector('.js-number');
+    let inputs =Number( input.value);
+
+    if (inputs <= 50){
+        inputs += 10;
+        console.log(inputs);  
+        
+    }else if(inputs > 50){
+        inputs += 20;
+        console.log(inputs);
+    }
+    document.querySelector('.js-shipping').innerHTML = `the shipping cost is ${inputs}`;
+ }
+
+</script>
+
+
+</html>

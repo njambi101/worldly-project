@@ -1,0 +1,49 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>07 functions</title>
+</head>
+<body>
+    <h3>Guess the Number</h3>
+    <p class="js-house">Guess a number between 1 and 10:</p>
+    <button class ="js-button" >click to get a random number</button>
+
+</body>
+<script>
+    document.querySelector('.js-button').addEventListener('click', function() {
+        const randomNumber = Math.floor(Math.random() * 10) + 1;
+        document.querySelector('.js-house').textContent = `The random number is: ${randomNumber}`;
+    });
+
+/*    function greet(name)  {
+        if (!name) {
+            console.log('Hello, stranger!');
+        }else{
+        console.log(`Hello, ${name}!`);
+    }
+}
+
+    greet('Grace');
+ 
+   function convertToFahrenheit(celsius) {
+    const fahrenheit = (celsius * 9/5) + 32;
+    console.log(`${celsius}°C is equal to ${fahrenheit}°F.`);
+}
+convertToFahrenheit(25);
+function covertToCelsius(fahrenheit) {
+    const celsius = (fahrenheit - 32) * 5/9;
+    console.log(`${fahrenheit}°F is equal to ${celsius}°C.`);
+}
+covertToCelsius(77);
+*/
+function number (a, b){
+    return a + b;
+    console.log('This will not be executed');
+}
+const result = number(5, 10);
+console.log(result);
+
+</script>
+</html>

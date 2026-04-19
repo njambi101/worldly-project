@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>07 functions</title>
+    <style>
+        .subscribe-button{
+            background-color: black;
+            color :white;
+            border:none;
+            font-weight: bold;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 20px; 
+            padding-right: 20px;
+            border-radius: 60px;
+            cursor: pointer;
+        }
+        .is-subscribed{
+            background-color: red;
+            color: white;
+        }
+
+        .liked{
+            background-color: blue;
+            color: white;
+            border: none;
+            font-weight: bolder;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            padding-left: 20px;
+            padding-right: 20px;
+            border-radius: 50px;
+            cursor:pointer;
+        }
+        .likee{
+            background-color: aquamarine;
+            color: white;
+        }
+
+
+        
+    </style>
+</head>
+<body>
+    <p>youtube subscribe button</p>
+    <button onclick="subscribbe()" class="js-subscribe-button   subscribe-button">subscribe</button>
+
+
+    <p>like this video</p>
+
+
+    <button onclick="
+        like();
+    " class="js-likes  liked">👍</button>
+
+    <script>
+        function subscribbe(){
+              const buttonElement = document.querySelector('.js-subscribe-button')
+            if (buttonElement.textContent === 'subscribe') {
+                buttonElement.textContent = 'subscribed';
+                buttonElement.classList.add('is-subscribed');
+            } else {
+                buttonElement.textContent = 'subscribe';
+                buttonElement.classList.remove('is-subscribed');
+            }
+
+        }
+
+        function like(){
+             const LikeElement = document.querySelector('.js-likes')
+            if (LikeElement.innerHTML === 'liKe') {
+                LikeElement.innerHTML = 'liked';
+                LikeElement.classList.add('likees');
+            }
+            else {
+                LikeElement.innerHTML = 'like';
+                LikeElement.classList.remove('likees');
+            }
+        }
+           
+    </script>
+</body>
+</html>

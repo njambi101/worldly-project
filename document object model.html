@@ -1,0 +1,59 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document object model</title>
+</head>
+<body>
+    <button class="js-button4">9a</button>
+    <button class="js-button5" onclick="vibes('9b')">9b</button>
+    <button class="js-button2" onclick="
+       vibes('heads');
+    ">heads</button>
+    <button class="js-button3" onclick="
+       vibes('tails');
+    ">tails</button><br><br>
+
+    <input placeholder="names" class ="js-input" type="text"  onkeydown="action(event)">
+    
+    <button placeholder="enter your name" class="js-name" 
+    onclick=" const inputElement = document.querySelector('.js-input');
+    document.querySelector('.js-results').innerHTML = `welcome ${inputElement.value}`;"
+    
+    
+    >submit</button>
+    <p class="js-results" ></p>
+
+    <p class ="js-result"></p>
+    <script>
+          function action(event) {
+                if (event.key === 'Enter') {
+                   const inputElement = document.querySelector('.js-input');
+                    document.querySelector('.js-results').innerHTML = `welcome ${inputElement.value}`;
+                }
+            }
+       console.log( document.querySelector('.js-button').innerHTML);
+         //Your JavaScript code here
+function vibes(click){  
+       //document.querySelector('.js-button').innerHTML = '9a is the best';
+const buttonInnerHTML = document.querySelector('.js-button2').innerHTML;
+const button1InnerHTML1 = document.querySelector('.js-button3').innerHTML;
+const love = document.querySelector('.js-button5').innerHTML;
+let  result = document.querySelector('.js-result');
+if (click === 'heads'){
+    result.innerHTML = `you chose ${buttonInnerHTML}`;
+}else if (click === 'tails'){
+    result.innerHTML = `you chose ${button1InnerHTML1}`;
+    }else if (click === '9b'){
+        result.innerHTML = `9b is the best ${love}`;
+}
+}
+
+
+document.querySelector('.js-button').innerHTML = '9a is the best';
+    </script>
+    
+</body>
+
+</html>

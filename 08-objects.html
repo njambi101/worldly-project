@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>07 functions</title>
+</head>
+<body>
+    <h3>Guess the Number</h3>
+    <p>Guess a number between 1 and 10:</p>
+    <button >click to get a random number</button>
+</body>
+<script>
+     /*age ={
+        gae1: 0,
+        age2: 0,
+    }
+    let ages = prompt('what is your age?');
+    age.age1 = parseInt(ages);
+    let age3 = prompt('what is your 2nd age?');
+    age.age2 = parseInt(age3);
+console.log(`my age is ${age.age1}`);
+console.log(`my age is ${age.age2}`);
+
+let names = {
+    firstName: 'jane',
+    lastName: 'doe',
+    school: 'university of code',
+}
+console.log(`my name is ${name.firstName} ${name.lastName}`);
+console.log(JSON.stringify(name));
+let nameString = JSON.stringify(name);
+console.log(JSON.parse(nameString));
+
+localStorage.setItem('names', names);
+console.log(localStorage.getItem('names'));
+*/
+
+/*const amazon = {
+    name: 'amazons',
+    founder: 'jeff bezos',
+    yearFounded: 1994,
+    isPublic: true,
+
+    methoed : function(){
+        console.log('i love amazon');
+    }
+}
+amazon.methoed();
+
+ 
+const {name,founder} = amazon;
+amazon2 ={
+    name 
+}
+console.log(amazon);
+
+const house ={
+    color: 'white',
+    size: 'big',
+    price: 500000,
+}
+house['owner-name'] = 'john doe';
+console.log(house);
+delete house.size;
+console.log(house);
+
+
+const product1 ={
+    name: 'basketball',
+    price: 2095 ,
+
+}
+
+const product2 ={
+    name: 'basketsocket',
+    price: 3095,
+}
+    function compareProducts(product1, product2) {
+        if (product1.name === product2.name && product1.price === product2.price) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    const areEqual = compareProducts(product1, product2);
+    console.log(areEqual);
+
+
+function product3(product1, product2){
+    if (product1.price < product2.price){
+        return product1; 
+    }else{
+        return product2
+    }
+}
+console.log(product3(product1, product2));
+*/
+const product4 ={
+    name: 'basketball',
+    price: 2095 ,
+    size: 'large',
+    color: 'orange',
+}
+
+const product5 = {
+    name: 'basketball',
+    price: 2000 ,
+    size: 'large',
+    color: 'orange',
+}
+function isSameProduct(product4, product5){
+    if(product4.name === product5.name || product4.price == product5.price){
+        return true;
+    }else{
+        return false;
+    }
+}
+console.log(isSameProduct(product4, product5));
+   
+</script>
+</html>
