@@ -348,3 +348,23 @@ await question4();
 await question5();
 winner();/*
 */
+/* function displayMessage(event) {
+       if (event.key === 'Enter') {
+            calculateShippingCost();
+        }
+    }
+        
+ function calculateShippingCost() {
+    const input = document.querySelector('.js-number');
+    let inputs =Number( input.value);
+
+    if (inputs <= 50){
+        inputs += 10;
+        console.log(inputs);  
+        
+    }else if(inputs > 50){
+        inputs += 20;
+        console.log(inputs);
+    }
+    document.querySelector('.js-shipping').innerHTML = `the shipping cost is ${inputs}`;
+ }*/
