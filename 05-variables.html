@@ -8,11 +8,24 @@
 </head>
 
 <body>
-  
+    <p>cart quantity</p>
+    <button onclick="console.log(`Cart Quantity:${cartQuantity}`)">Show Quantity</button>
+    <button onclick="cartQuantity +=1;
+    console.log(`Cart Quantity:${cartQuantity}`)">Add to cart</button>
+    <button onclick="cartQuantity += 2;
+    console.log(`Cart Quantity:${cartQuantity}`)">+2</button>
+    <button onclick="cartQuantity += 3;
+    console.log(`Cart Quantity:${cartQuantity}`)">+3</button>
+    <button onclick="cartQuantity -= 1;
+    console.log(`Cart Quantity:${cartQuantity}`)">Remove items</button>
+    <button onclick="cartQuantity = 0;
+    console.log('The cart has been reset.')">Reset Cart</button>
+     
 </body>
 
 
 <script>
+let cartQuantity = 0;
 
 
 </script>
