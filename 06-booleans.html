@@ -18,7 +18,27 @@
             console.log('wait eho are you?')
          }
             */
-        true? 'truethy' : 'falsy'   
+           /* this is short form of an if statement
+        const names = false ? 'truethy' : 'falsy';
+        console.log(names) */
+        /* falsy values inclueds; NAN, 0, '' , undefined, null*/
+      /*const thiss = 0? 'true' : 'false'
+      console.log(thiss)*/
+
+      /* '||' can be used as a default operator for example;-
+      
+     const currency = undefined || 'usd' 
+     console.log(currency)*/
+    const times = Math.random();
+     let hour = '';
+     if (times >= 0 && times < 1/3){
+        hour = 'good morning';
+     }else if(times >= 1/3 && times < 2/3){
+        hour = 'good evining'
+     }else if(times >= 2/3 && times < 1){
+        hour = 'good night'
+     }
+    console.log(hour)
          </script>
     </body>
 </html>
