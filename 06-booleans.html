@@ -45,7 +45,28 @@
       console.log('good work you have made it')
     }
     console.log(maths)*/
+/*let age = 43;
+const isholiday = true;
+if(age <= 6 || age >= 60 &&(isholiday)){
+   console.log('you are qualified for the discount')
+}else{
+   console.log('you do not qualify for the discount')
+}*/ 
+const random = Math.random();
+let result ='';
+let guese = '';
+if(random >= 0 && random < 2/5){
+   result = 'heads'
+}else if(random >= 2/5 && random < 1){
+   result = 'tails'
+}
 
+if(result === 'heads'){
+    guese ='you win' 
+}else if(result === 'tails'){
+     guese = 'you lose'
+}
+console.log(guese)
          </script>
     </body>
 </html>
