@@ -6,16 +6,68 @@
     <title>07 functions</title>
 </head>
 <body>
-    <h3>Guess the Number</h3>
-    <p class="js-house">Guess a number between 1 and 10:</p>
-    <button class ="js-button" >click to get a random number</button>
+  
+<body>
+    <h3>rock paper scissors</h3>
+    <button onclick="
+    const moves = pickComputrMove();
+    let results ='';
+    if (moves === 'rock'){
+        results = 'tie';
+    } else if (moves === 'paper'){
+        results = 'lose';
+    } else if (moves === 'scissors'){
+        results = 'win';
+    }
+    alert(`the computer move is:  ${moves} and you:  ${results} thankyou for playing😊`);
+    
+    ">rock</button>
 
+    <button onclick="
+        const moves = pickComputrMove();
+        let person = '';
+        if (moves === 'rock'){
+            person = 'you loose';
+        }else if (moves === 'paper'){
+            person = ' congrats you win';
+        }else if (moves === 'scissors') {
+            person = 'sorry you lose';
+            
+        }
+    alert(`the computer move is:  ${moves} and you:  ${person} thankyou for playing😊`);
+
+    ">paper</button>
+
+
+    <button onclick="
+          const moves = pickComputrMove();
+            let persons = '';
+            if (moves === 'rock'){
+                persons = 'you loose';
+            }else if (moves === 'paper'){
+                persons = ' sorry you lose';
+            }else if (moves === 'scissors') {
+                persons = ' congrats you win';
+                
+            }
+    alert(`the computer move is:  ${moves} and you:  ${persons} thankyou for playing😊`);""
+>scissors </button>
 </body>
 <script>
-    document.querySelector('.js-button').addEventListener('click', function() {
-        const randomNumber = Math.floor(Math.random() * 10) + 1;
-        document.querySelector('.js-house').textContent = `The random number is: ${randomNumber}`;
-    });
+   
+    function pickComputrMove(){
+         const choices = Math.random();
+         let moves = '';
+        if (choices >= 0 && choices < 1 / 3) {
+            moves = 'paper';
+        } else if (choices >= 1 / 3 && choices < 2 / 3) {
+            moves = 'rock';
+        } else if (choices >= 2 / 3 && choices < 1) {
+            moves = 'scissors';
+        };
+        return moves;
+
+    }
 
 /*    function greet(name)  {
         if (!name) {
@@ -37,13 +89,13 @@ function covertToCelsius(fahrenheit) {
     console.log(`${fahrenheit}°F is equal to ${celsius}°C.`);
 }
 covertToCelsius(77);
-*/
+
 function number (a, b){
     return a + b;
     console.log('This will not be executed');
 }
 const result = number(5, 10);
 console.log(result);
-
+*/
 </script>
 </html>
