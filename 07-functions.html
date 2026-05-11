@@ -10,51 +10,60 @@
 <body>
     <h3>rock paper scissors</h3>
     <button onclick="
-    const moves = pickComputrMove();
-    let results ='';
-    if (moves === 'rock'){
-        results = 'tie';
-    } else if (moves === 'paper'){
-        results = 'lose';
-    } else if (moves === 'scissors'){
-        results = 'win';
-    }
-    alert(`the computer move is:  ${moves} and you:  ${results} thankyou for playing😊`);
+    playGame('rock');
     
     ">rock</button>
 
     <button onclick="
-        const moves = pickComputrMove();
-        let person = '';
-        if (moves === 'rock'){
-            person = 'you loose';
-        }else if (moves === 'paper'){
-            person = ' congrats you win';
-        }else if (moves === 'scissors') {
-            person = 'sorry you lose';
-            
-        }
-    alert(`the computer move is:  ${moves} and you:  ${person} thankyou for playing😊`);
+       
+    playGame('paper');
 
     ">paper</button>
 
 
-    <button onclick="
-          const moves = pickComputrMove();
-            let persons = '';
-            if (moves === 'rock'){
-                persons = 'you loose';
-            }else if (moves === 'paper'){
-                persons = ' sorry you lose';
-            }else if (moves === 'scissors') {
-                persons = ' congrats you win';
-                
-            }
-    alert(`the computer move is:  ${moves} and you:  ${persons} thankyou for playing😊`);""
+    <button onclick="playGame('scissors')"
+        
 >scissors </button>
 </body>
 <script>
-   
+
+    function playGame(playerMove) {  
+        const moves = pickComputrMove();
+                let persons = '';
+            if(playerMove === 'scissors'){
+                
+                if (moves === 'rock') {
+                    persons = 'you loose';
+                } else if (moves === 'paper') {
+                    persons = ' sorry you lose';
+                } else if (moves === 'scissors') {
+                    persons = ' congrats you win';
+
+                }
+                
+            }else if (playerMove === 'paper'){
+                
+                if (moves === 'rock') {
+                    persons = 'you loose';
+                } else if (moves === 'paper') {
+                    persons = ' congrats you win';
+                } else if (moves === 'scissors') {
+                    persons = 'sorry you lose';
+
+                }
+            }else if (playerMove === 'rock'){
+              
+                if (moves === 'rock') {
+                    persons = 'you loose';
+                } else if (moves === 'paper') {
+                    persons = ' congrats you win';
+                } else if (moves === 'scissors') {
+                    persons = 'sorry you lose';
+
+                }
+            }
+    alert(`the computer move is:  ${moves}  you picked: ${playerMove} , ${persons} thankyou for playing😊`);
+        }
     function pickComputrMove(){
          const choices = Math.random();
          let moves = '';
