@@ -6,7 +6,7 @@ http.createServer(function (req, res) {
   res.end('Hello World!');
 }).listen(8080);
  */ 
-let num =[];
+let calculationHistory = [];
 
 const logCalculation = (num1, operator, num2, result) => {
     const logEntry = {
