@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator project</title>
+</head>
+<body>
+    <h1 class="answers"></h1><br><br>
+    <button onclick=" calcs(1)">1</button>
+    <button onclick="calcs(2)">2</button>
+    <button onclick="calcs(3)">3</button>
+    <button onclick="calcs(4)">4</button><br><br>
+    <button onclick="calcs(5)">5</button>
+    <button onclick="calcs(6)">6</button>
+    <button onclick="calcs(7)">7</button>
+    <button onclick="calcs(8)">8</button><br><br>
+    <button onclick="calcs(9)">9</button>
+    <button onclick="calcs(0)">0</button>
+    <button onclick="calcs('+')">+</button>
+    <button onclick="calcs('-')">-</button><br><br>
+    <button onclick="calcs('*')">*</button>
+    <button onclick="calcs('/')">/</button>
+    <button onclick=" calculations()">=</button><br><br>
+    <button onclick="clers()">clear</button>
+    <button class="btn">history</button>
+    <p class="display-history"></p>
+
+    <script>
+        let numb = ''
+        const history = []
+        let past = document.querySelector('.display-history')
+        let btn =document.querySelector('.btn')
+        
+        btn.addEventListener('click', () => {
+            history.push(numb);
+            past.innerHTML = numb;
+        })
+        function calcs (value) {
+            numb += value
+            
+            answer.innerHTML = numb;
+        }
+        let answer = document.querySelector('.answers');
+
+              
+        function calculations (){
+            
+            if (numb  !== '') {
+                let result = eval(numb)
+                answer.innerHTML= result;
+                numb = result.toString()
+            }
+        }
+        
+        function clers () {
+            numb = 0;
+                answer.innerHTML = '0';
+                
+            }
+    </script>
+</body>
+</html> 
