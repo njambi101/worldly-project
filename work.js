@@ -35,7 +35,7 @@ const multiply = (a, b) => {
   logCalculation(a, '*', b, result);
   return result;
 }
-
+console.log(multiply(3, 2))
 const divide = (a, b) => {
     if (b === 0) {
         const errorMsg = "Error: Division by zero";
@@ -61,6 +61,41 @@ const displayHistory = () => {
     console.log("--------------------------------\n");
 };
 
+
+/*function calcHistory (c, operator, d, result) {
+    const calculatorEntry = {
+
+    }
+}
+console.log(history)
+function addition ( a, b)  {
+    result = a + b;
+    return result
+}
+
+function subraction (a, b) {
+    result = a - b;
+    return result
+}
+
+function multiply  (a, b) {
+    result = a * b
+    return result;
+}
+
+function division (a, b) {
+     result = a / b;
+    return result;
+}
+console.log(multiply(3,5))
+for(let i = 0; i < history.length; i++){
+    if ( result === ''){
+        console.log( "your calculator history is empty")
+    } else {
+         history.push(result)
+         
+    }
+}*/ 
 
 
 
